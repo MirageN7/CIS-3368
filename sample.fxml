@@ -1,0 +1,68 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<HBox fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml" alignment="center">
+    <ListView fx:id="employeeListView"/>
+    <VBox>
+        <padding><Insets top="10" bottom="10" left="10" right="0"/></padding>
+        <HBox>
+            <padding><Insets top="10" bottom="10" left="10" right="0"/></padding>
+            <Label text="First Name" prefWidth="100"/>
+            <TextField prefWidth="150" fx:id="firstNameTextField"/>
+        </HBox>
+        <HBox>
+            <padding><Insets top="0" bottom="10" left="10" right="0"/></padding>
+            <Label text="Last Name" prefWidth="100"/>
+            <TextField prefWidth="150" fx:id="lastNameTextField"/>
+        </HBox>
+        <HBox>
+            <padding><Insets top="0" bottom="10" left="10" right="0"/></padding>
+            <Label text="Employee Email" prefWidth="100"/>
+            <TextField prefWidth="250" fx:id="emailTextField"/>
+        </HBox>
+        <HBox>
+            <padding><Insets top="0" bottom="10" left="10" right="0"/></padding>
+            <Label text="Hire Date" prefWidth="100"/>
+            <DatePicker prefWidth="110" fx:id="hireDatePicker"/>
+        </HBox>
+        <HBox>
+            <padding><Insets top="0" bottom="10" left="10" right="0"/></padding>
+            <Label text="Role" prefWidth="100"/>
+            <ComboBox prefWidth="150" fx:id="roleComboBox"/>
+        </HBox>
+        <HBox>
+            <padding><Insets top="0" bottom="10" left="10" right="0"/></padding>
+            <Label text="Is Active" prefWidth="100" />
+            <CheckBox fx:id="isActiveCheckBox"/>
+        </HBox>
+        <VBox>
+            <padding><Insets top="0" bottom="10" left="10" right="0"/></padding>
+            <HBox>
+                <Label text="Status"/>
+                <VBox>
+                    <padding><Insets top="0" bottom="0" left="65" right="0"/></padding>
+                    <RadioButton text="Online" fx:id="onlineRadioButton"/>
+                    <RadioButton text="Away" fx:id="awayRadioButton"/>
+                    <RadioButton text="Busy" fx:id="busyRadioButton"/>
+                    <RadioButton text="Offline" fx:id="offlineRadioButton"/>
+                </VBox>
+            </HBox>
+        </VBox>
+        <HBox>
+            <padding><Insets top="0" bottom="10" left="10" right="0"/></padding>
+            <Label text="Additional Notes" prefWidth="100"/>
+            <TextArea prefWidth="400" prefHeight="200" fx:id="notesTextArea" promptText="Enter additional information here..."/>
+        </HBox>
+    </VBox>
+</HBox>
